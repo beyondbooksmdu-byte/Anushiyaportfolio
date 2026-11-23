@@ -74,6 +74,7 @@ export default function HeroSection({onExpandImage}: HeroSectionProps) {
               subtitle="M. Anushiya"
               placeholderNote="Profile photo placeholder. Upload your professional portrait to personalize the header."
               kind="portrait"
+              defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/photo%201.jpeg"
               aspectRatioClass="aspect-[4/5]"
               onExpand={onExpandImage}
             />

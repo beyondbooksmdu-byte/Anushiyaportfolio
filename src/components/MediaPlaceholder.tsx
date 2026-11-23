@@ -24,6 +24,7 @@ interface MediaPlaceholderProps {
   subtitle?: string;
   placeholderNote: string;
   kind: PlaceholderKind;
+  defaultImageUrl?: string;
   aspectRatioClass?: string;
   onExpand?: (data: LightboxData) => void;
   compact?: boolean;
@@ -80,12 +81,13 @@ export default function MediaPlaceholder({
   subtitle,
   placeholderNote,
   kind,
+  defaultImageUrl,
   aspectRatioClass = 'aspect-[16/10]',
   onExpand,
   compact = false,
 }: MediaPlaceholderProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const configuredDefaultUrl = PORTFOLIO_IMAGE_URLS[slotId] || null;
+  const configuredDefaultUrl = defaultImageUrl || PORTFOLIO_IMAGE_URLS[slotId] || null;
 
   const [imageUrl, setImageUrl] = useState<string | null>(configuredDefaultUrl);
   const [imgError, setImgError] = useState(false);
@@ -96,7 +98,12 @@ export default function MediaPlaceholder({
   useEffect(() => {
     try {
       const saved = window.localStorage.getItem(`${STORAGE_PREFIX}${slotId}`);
-      if (saved) {
+      if (
+        saved &&
+        (saved.startsWith('https://') ||
+          saved.startsWith('http://') ||
+          saved.startsWith('data:image/'))
+      ) {
         setImageUrl(saved);
         setImgError(false);
       } else {

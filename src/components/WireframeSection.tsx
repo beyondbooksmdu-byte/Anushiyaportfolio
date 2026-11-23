@@ -36,6 +36,7 @@ export default function WireframeSection({
             subtitle="Original Hand-Drawn Sketch (Front)"
             placeholderNote="Upload your Paper Sketch – Front Side image or paste its Supabase Public URL."
             kind="wireframe"
+            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/paper%20sketch%20%20front.jpeg"
             aspectRatioClass="aspect-[3/4]"
             onExpand={onExpandImage}
           />
@@ -46,6 +47,7 @@ export default function WireframeSection({
             subtitle="Original Hand-Drawn Sketch (Back)"
             placeholderNote="Upload your Paper Sketch – Back Side image or paste its Supabase Public URL."
             kind="wireframe"
+            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/papersketch%20back.jpeg"
             aspectRatioClass="aspect-[3/4]"
             onExpand={onExpandImage}
           />
@@ -56,6 +58,7 @@ export default function WireframeSection({
             subtitle="Complete Wireframe Layout"
             placeholderNote="Upload your single Wireframe image or paste its Supabase Public URL."
             kind="wireframe"
+            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/wireframe%20paper%20sketch.jpeg"
             aspectRatioClass="aspect-[3/4]"
             onExpand={onExpandImage}
           />

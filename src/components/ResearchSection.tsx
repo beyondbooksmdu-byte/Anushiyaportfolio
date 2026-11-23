@@ -33,6 +33,7 @@ export default function ResearchSection({onExpandImage}: ResearchSectionProps) {
             subtitle="Combined Research & Competitor Comparison Visual"
             placeholderNote="Upload your combined Market Research & Competitor Analysis image or paste its Supabase Public URL."
             kind="market-research"
+            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/market%20reserch&ca.jpeg"
             aspectRatioClass="aspect-[16/9]"
             onExpand={onExpandImage}
           />

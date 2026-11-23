@@ -41,6 +41,7 @@ export default function ProjectsSection({
                 subtitle="Featured Digital Marketing Project"
                 placeholderNote="Upload your CineVerse Theater Website hero screenshot or presentation visual."
                 kind="project"
+                defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/cineverse%20website%20front.jpeg"
                 aspectRatioClass="aspect-[16/10]"
                 onExpand={onExpandImage}
               />

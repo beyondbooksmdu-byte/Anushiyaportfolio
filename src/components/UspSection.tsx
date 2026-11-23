@@ -143,6 +143,7 @@ export default function UspSection({onExpandImage}: UspSectionProps) {
             subtitle="Single Complete USP Research Image"
             placeholderNote="Upload your complete USP research image here (displayed as a single unified visual)."
             kind="usp"
+            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/usp%20cineverse.jpeg"
             aspectRatioClass="aspect-[16/9]"
             onExpand={onExpandImage}
           />

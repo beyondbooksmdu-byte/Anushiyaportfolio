@@ -34,6 +34,7 @@ export default function SitemapSection({onExpandImage}: SitemapSectionProps) {
             subtitle="User-Facing Navigation Architecture"
             placeholderNote="Upload your Frontend Sitemap diagram illustrating visitor pages and navigation hierarchy."
             kind="sitemap"
+            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/site%20map%20frontend.jpeg"
             aspectRatioClass="aspect-[4/3]"
             onExpand={onExpandImage}
           />
@@ -45,6 +46,7 @@ export default function SitemapSection({onExpandImage}: SitemapSectionProps) {
             subtitle="Administrative & Content Architecture"
             placeholderNote="Upload your Backend Sitemap diagram detailing system routes, data flow, and management views."
             kind="sitemap"
+            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/sitemap%20backend.jpeg"
             aspectRatioClass="aspect-[4/3]"
             onExpand={onExpandImage}
           />
