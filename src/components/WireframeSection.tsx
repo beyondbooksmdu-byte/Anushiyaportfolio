@@ -29,7 +29,7 @@ export default function WireframeSection({
           whileInView={{opacity: 1, y: 0}}
           viewport={{once: true, amount: 0.15}}
           transition={{duration: 0.45, ease: [0.16, 1, 0.3, 1]}}
-          className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+          className="mt-12 grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           <MediaPlaceholder
             slotId="paper_sketch_front"
@@ -39,6 +39,7 @@ export default function WireframeSection({
             kind="wireframe"
             defaultImageUrl={PORTFOLIO_IMAGE_URLS.paper_sketch_front}
             aspectRatioClass="aspect-[3/4]"
+            enforceUniformAspectRatio
             onExpand={onExpandImage}
           />
 
@@ -50,6 +51,7 @@ export default function WireframeSection({
             kind="wireframe"
             defaultImageUrl={PORTFOLIO_IMAGE_URLS.paper_sketch_back}
             aspectRatioClass="aspect-[3/4]"
+            enforceUniformAspectRatio
             onExpand={onExpandImage}
           />
 
@@ -61,6 +63,7 @@ export default function WireframeSection({
             kind="wireframe"
             defaultImageUrl={PORTFOLIO_IMAGE_URLS.wireframe_single}
             aspectRatioClass="aspect-[3/4]"
+            enforceUniformAspectRatio
             onExpand={onExpandImage}
           />
         </motion.div>

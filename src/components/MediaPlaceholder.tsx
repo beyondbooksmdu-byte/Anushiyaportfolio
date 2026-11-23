@@ -26,6 +26,7 @@ interface MediaPlaceholderProps {
   kind: PlaceholderKind;
   defaultImageUrl?: string;
   aspectRatioClass?: string;
+  enforceUniformAspectRatio?: boolean;
   onExpand?: (data: LightboxData) => void;
   compact?: boolean;
 }
@@ -83,6 +84,7 @@ export default function MediaPlaceholder({
   kind,
   defaultImageUrl,
   aspectRatioClass = 'aspect-[16/10]',
+  enforceUniformAspectRatio = false,
   onExpand,
   compact = false,
 }: MediaPlaceholderProps) {
@@ -206,6 +208,9 @@ export default function MediaPlaceholder({
 
   // Adaptive image presentation class based on original orientation & proportions
   const getAdaptiveImageClasses = () => {
+    if (enforceUniformAspectRatio) {
+      return 'h-full w-full rounded-lg object-contain';
+    }
     if (!dimensions) {
       return 'mx-auto h-auto max-h-[600px] w-full rounded-lg object-contain';
     }
@@ -219,7 +224,11 @@ export default function MediaPlaceholder({
   };
 
   return (
-    <div className="card-luxury card-luxury-hover group relative overflow-hidden rounded-2xl p-3 sm:p-4">
+    <div
+      className={`card-luxury card-luxury-hover group relative overflow-hidden rounded-2xl p-3 sm:p-4 ${
+        enforceUniformAspectRatio ? 'flex h-full flex-col justify-between' : ''
+      }`}
+    >
       <input
         ref={fileInputRef}
         type="file"
@@ -230,7 +239,11 @@ export default function MediaPlaceholder({
       />
 
       {hasActiveImage ? (
-        <div className="relative flex w-full items-center justify-center overflow-hidden rounded-xl border border-[#C5A253]/20 bg-[#F5F1E8]/55 p-2 sm:p-3">
+        <div
+          className={`relative flex w-full items-center justify-center overflow-hidden rounded-xl border border-[#C5A253]/20 bg-[#F5F1E8]/55 p-2 sm:p-3 ${
+            enforceUniformAspectRatio ? aspectRatioClass : ''
+          }`}
+        >
           <img
             src={imageUrl ?? undefined}
             alt={title}
