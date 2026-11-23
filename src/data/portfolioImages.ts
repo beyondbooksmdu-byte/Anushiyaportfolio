@@ -1,15 +1,15 @@
 /**
- * Independent image source registry for M. Anushiya's Digital Marketing Portfolio.
+ * Single centralized data source for all image URLs in M. Anushiya's
+ * Digital Marketing Portfolio.
  *
- * Replace any empty string ('') below with the corresponding Supabase Storage
- * Public URL for that specific section. Each slot is completely independent and
- * never shared across unrelated sections.
+ * All section components read their image URLs from this file.
  */
 export const PORTFOLIO_IMAGE_URLS: Record<string, string> = {
   // Profile & About
   profile_photo:
     'https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/photo%201.jpeg',
-  about_profile_image: '',
+  about_profile_image:
+    'https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/photo%201.jpeg',
 
   // Digital Marketing Projects (CineVerse Theater Website)
   cineverse_project_showcase:
@@ -36,9 +36,10 @@ export const PORTFOLIO_IMAGE_URLS: Record<string, string> = {
     'https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/papersketch%20back.jpeg',
   wireframe_single:
     'https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/wireframe%20paper%20sketch.jpeg',
-  wireframe_final_website_design: '',
+  wireframe_final_website_design:
+    'https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/cineverse%20website%20front.jpeg',
 
-  // SEO Profile
+  // SEO Profile (reserved for future updates)
   seo_snapshot_primary: '',
   seo_snapshot_secondary: '',
 };

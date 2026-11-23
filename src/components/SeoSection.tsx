@@ -1,4 +1,5 @@
 import {motion} from 'motion/react';
+import {PORTFOLIO_IMAGE_URLS} from '../data/portfolioImages';
 import {LightboxData} from '../types/portfolio';
 import MediaPlaceholder from './MediaPlaceholder';
 import SectionHeader from './SectionHeader';
@@ -33,6 +34,7 @@ export default function SeoSection({onExpandImage}: SeoSectionProps) {
             subtitle="Image Placeholder for Future Updates"
             placeholderNote="Reserved placeholder for future Search Console, keyword ranking, or technical SEO audit screenshots."
             kind="seo"
+            defaultImageUrl={PORTFOLIO_IMAGE_URLS.seo_snapshot_primary}
             aspectRatioClass="aspect-[16/10]"
             onExpand={onExpandImage}
           />
@@ -43,6 +45,7 @@ export default function SeoSection({onExpandImage}: SeoSectionProps) {
             subtitle="Image Placeholder for Future Updates"
             placeholderNote="Reserved placeholder for future on-page optimization records and organic performance visuals."
             kind="seo"
+            defaultImageUrl={PORTFOLIO_IMAGE_URLS.seo_snapshot_secondary}
             aspectRatioClass="aspect-[16/10]"
             onExpand={onExpandImage}
           />

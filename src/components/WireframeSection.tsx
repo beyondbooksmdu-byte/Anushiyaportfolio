@@ -1,4 +1,5 @@
 import {motion} from 'motion/react';
+import {PORTFOLIO_IMAGE_URLS} from '../data/portfolioImages';
 import {LightboxData} from '../types/portfolio';
 import MediaPlaceholder from './MediaPlaceholder';
 import SectionHeader from './SectionHeader';
@@ -36,7 +37,7 @@ export default function WireframeSection({
             subtitle="Original Hand-Drawn Sketch (Front)"
             placeholderNote="Upload your Paper Sketch – Front Side image or paste its Supabase Public URL."
             kind="wireframe"
-            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/paper%20sketch%20%20front.jpeg"
+            defaultImageUrl={PORTFOLIO_IMAGE_URLS.paper_sketch_front}
             aspectRatioClass="aspect-[3/4]"
             onExpand={onExpandImage}
           />
@@ -47,7 +48,7 @@ export default function WireframeSection({
             subtitle="Original Hand-Drawn Sketch (Back)"
             placeholderNote="Upload your Paper Sketch – Back Side image or paste its Supabase Public URL."
             kind="wireframe"
-            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/papersketch%20back.jpeg"
+            defaultImageUrl={PORTFOLIO_IMAGE_URLS.paper_sketch_back}
             aspectRatioClass="aspect-[3/4]"
             onExpand={onExpandImage}
           />
@@ -58,7 +59,7 @@ export default function WireframeSection({
             subtitle="Complete Wireframe Layout"
             placeholderNote="Upload your single Wireframe image or paste its Supabase Public URL."
             kind="wireframe"
-            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/wireframe%20paper%20sketch.jpeg"
+            defaultImageUrl={PORTFOLIO_IMAGE_URLS.wireframe_single}
             aspectRatioClass="aspect-[3/4]"
             onExpand={onExpandImage}
           />
@@ -92,6 +93,7 @@ export default function WireframeSection({
             subtitle="Completed Interface Screenshot"
             placeholderNote="Upload your Final Website Design screenshot or paste its Supabase Public URL."
             kind="final-design"
+            defaultImageUrl={PORTFOLIO_IMAGE_URLS.wireframe_final_website_design}
             aspectRatioClass="aspect-[16/9]"
             onExpand={onExpandImage}
           />

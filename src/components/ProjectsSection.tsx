@@ -1,5 +1,6 @@
 import {motion} from 'motion/react';
 import {ExternalLink} from 'lucide-react';
+import {PORTFOLIO_IMAGE_URLS} from '../data/portfolioImages';
 import {LightboxData} from '../types/portfolio';
 import MediaPlaceholder from './MediaPlaceholder';
 import SectionHeader from './SectionHeader';
@@ -41,7 +42,7 @@ export default function ProjectsSection({
                 subtitle="Featured Digital Marketing Project"
                 placeholderNote="Upload your CineVerse Theater Website hero screenshot or presentation visual."
                 kind="project"
-                defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/cineverse%20website%20front.jpeg"
+                defaultImageUrl={PORTFOLIO_IMAGE_URLS.cineverse_project_showcase}
                 aspectRatioClass="aspect-[16/10]"
                 onExpand={onExpandImage}
               />

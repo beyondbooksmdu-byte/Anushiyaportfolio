@@ -1,4 +1,5 @@
 import {motion} from 'motion/react';
+import {PORTFOLIO_IMAGE_URLS} from '../data/portfolioImages';
 import {LightboxData} from '../types/portfolio';
 import MediaPlaceholder from './MediaPlaceholder';
 import SectionHeader from './SectionHeader';
@@ -52,6 +53,7 @@ export default function AboutSection({onExpandImage}: AboutSectionProps) {
               subtitle="Profile-Related Image Placeholder"
               placeholderNote="Upload a workspace, brand strategy, or profile-related photograph for the About Me section."
               kind="about"
+              defaultImageUrl={PORTFOLIO_IMAGE_URLS.about_profile_image}
               aspectRatioClass="aspect-[4/4]"
               onExpand={onExpandImage}
             />

@@ -15,7 +15,7 @@ import {
   User,
   X,
 } from 'lucide-react';
-import {PORTFOLIO_IMAGE_URLS} from '../config/portfolioImages';
+import {PORTFOLIO_IMAGE_URLS} from '../data/portfolioImages';
 import {LightboxData, PlaceholderKind} from '../types/portfolio';
 
 interface MediaPlaceholderProps {

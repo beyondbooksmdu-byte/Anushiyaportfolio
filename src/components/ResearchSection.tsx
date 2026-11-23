@@ -1,4 +1,5 @@
 import {motion} from 'motion/react';
+import {PORTFOLIO_IMAGE_URLS} from '../data/portfolioImages';
 import {LightboxData} from '../types/portfolio';
 import MediaPlaceholder from './MediaPlaceholder';
 import SectionHeader from './SectionHeader';
@@ -33,7 +34,7 @@ export default function ResearchSection({onExpandImage}: ResearchSectionProps) {
             subtitle="Combined Research & Competitor Comparison Visual"
             placeholderNote="Upload your combined Market Research & Competitor Analysis image or paste its Supabase Public URL."
             kind="market-research"
-            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/market%20reserch&ca.jpeg"
+            defaultImageUrl={PORTFOLIO_IMAGE_URLS.market_research_competitor_analysis}
             aspectRatioClass="aspect-[16/9]"
             onExpand={onExpandImage}
           />

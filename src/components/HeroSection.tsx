@@ -1,5 +1,6 @@
 import {motion} from 'motion/react';
 import {ArrowDownRight, Mail} from 'lucide-react';
+import {PORTFOLIO_IMAGE_URLS} from '../data/portfolioImages';
 import {LightboxData} from '../types/portfolio';
 import MediaPlaceholder from './MediaPlaceholder';
 
@@ -74,7 +75,7 @@ export default function HeroSection({onExpandImage}: HeroSectionProps) {
               subtitle="M. Anushiya"
               placeholderNote="Profile photo placeholder. Upload your professional portrait to personalize the header."
               kind="portrait"
-              defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/photo%201.jpeg"
+              defaultImageUrl={PORTFOLIO_IMAGE_URLS.profile_photo}
               aspectRatioClass="aspect-[4/5]"
               onExpand={onExpandImage}
             />

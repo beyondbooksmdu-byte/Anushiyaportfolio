@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import {motion} from 'motion/react';
 import {Check, Pencil, RotateCcw} from 'lucide-react';
+import {PORTFOLIO_IMAGE_URLS} from '../data/portfolioImages';
 import {LightboxData} from '../types/portfolio';
 import MediaPlaceholder from './MediaPlaceholder';
 import SectionHeader from './SectionHeader';
@@ -143,7 +144,7 @@ export default function UspSection({onExpandImage}: UspSectionProps) {
             subtitle="Single Complete USP Research Image"
             placeholderNote="Upload your complete USP research image here (displayed as a single unified visual)."
             kind="usp"
-            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/usp%20cineverse.jpeg"
+            defaultImageUrl={PORTFOLIO_IMAGE_URLS.cineverse_usp_single}
             aspectRatioClass="aspect-[16/9]"
             onExpand={onExpandImage}
           />

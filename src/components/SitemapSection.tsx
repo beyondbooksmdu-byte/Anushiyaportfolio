@@ -1,4 +1,5 @@
 import {motion} from 'motion/react';
+import {PORTFOLIO_IMAGE_URLS} from '../data/portfolioImages';
 import {LightboxData} from '../types/portfolio';
 import MediaPlaceholder from './MediaPlaceholder';
 import SectionHeader from './SectionHeader';
@@ -34,7 +35,7 @@ export default function SitemapSection({onExpandImage}: SitemapSectionProps) {
             subtitle="User-Facing Navigation Architecture"
             placeholderNote="Upload your Frontend Sitemap diagram illustrating visitor pages and navigation hierarchy."
             kind="sitemap"
-            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/site%20map%20frontend.jpeg"
+            defaultImageUrl={PORTFOLIO_IMAGE_URLS.sitemap_frontend}
             aspectRatioClass="aspect-[4/3]"
             onExpand={onExpandImage}
           />
@@ -46,7 +47,7 @@ export default function SitemapSection({onExpandImage}: SitemapSectionProps) {
             subtitle="Administrative & Content Architecture"
             placeholderNote="Upload your Backend Sitemap diagram detailing system routes, data flow, and management views."
             kind="sitemap"
-            defaultImageUrl="https://vmorqxhwnihibbjgfpuo.supabase.co/storage/v1/object/public/anushiya%20portfolio/cinevere%20img/sitemap%20backend.jpeg"
+            defaultImageUrl={PORTFOLIO_IMAGE_URLS.sitemap_backend}
             aspectRatioClass="aspect-[4/3]"
             onExpand={onExpandImage}
           />
